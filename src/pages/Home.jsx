@@ -5,7 +5,7 @@ import Loader from '../components/Loader';
 import Island from '../models/island';
 import Sky from '../models/Sky';
 import Bird from '../models/Bird';
-import { Plane } from '@react-three/drei';
+import Plane from '../models/Plane';
 
 const Home = () => {
   const adjustIslandForScreenSize = () =>{
