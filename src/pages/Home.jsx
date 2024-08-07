@@ -4,6 +4,8 @@ import {Canvas} from '@react-three/fiber'
 import Loader from '../components/Loader';
 import Island from '../models/island';
 import Sky from '../models/Sky';
+import Bird from '../models/Bird';
+import { Plane } from '@react-three/drei';
 
 const Home = () => {
   const adjustIslandForScreenSize = () =>{
@@ -39,12 +41,14 @@ const Home = () => {
             <spotLight /> */}
             {/* <spotLight /> */}
             <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1}/>
+            <Bird/>
             <Sky/>
             <Island
               position = {islandPosition}
               scale = {islandScale}
               rotation = {islandRotation}
              />
+             <Plane />
         </Suspense>
 
       </Canvas>
