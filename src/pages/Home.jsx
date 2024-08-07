@@ -3,6 +3,7 @@ import { Suspense } from 'react'
 import {Canvas} from '@react-three/fiber'
 import Loader from '../components/Loader';
 import Island from '../models/island';
+import Sky from '../models/Sky';
 
 const Home = () => {
   const adjustIslandForScreenSize = () =>{
@@ -32,12 +33,13 @@ const Home = () => {
 
         {/* for creating the loading screen */}
         <Suspense fallback={<Loader />}>
-            <directionalLight />
-            <ambientLight />
-            <pointLight />
-            <spotLight />
-            <spotLight />
-            <hemisphereLight />
+            <directionalLight position={[1,1,1]} intensity={2} />
+            <ambientLight intensity={0.5} />
+            {/* <pointLight />
+            <spotLight /> */}
+            {/* <spotLight /> */}
+            <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1}/>
+            <Sky/>
             <Island
               position = {islandPosition}
               scale = {islandScale}
