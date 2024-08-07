@@ -15,7 +15,6 @@ import { a } from '@react-spring/three';
 
 
 const Island = ({isRotating, setIsRotating,setCurrentStage, ...props}) => {
-
   
   const islandRef = useRef()
   const {gl, viewport} = useThree()
