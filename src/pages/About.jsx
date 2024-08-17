@@ -1,28 +1,29 @@
-import React from 'react'
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
 
-import  {skills}  from '../constants';
+import { experiences, skills } from "../constants";
+
+import "react-vertical-timeline-component/style.min.css";
+import CTA from "../components/CTA";
 
 const About = () => {
   return (
     <section className='max-container'>
       <h1 className='head-text'>
-        Hello, I'm <span className='blue-gradient_text
-         font-semibold drop-shadow'>
+        Hello, I'm{" "}
+        <span className='blue-gradient_text font-semibold drop-shadow'>
+          {" "}
           Fenar Khan
-        </span>
+        </span>{" "}
+        👋
       </h1>
 
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         <p>
-        As a multifaceted professional deeply passionate about the convergence of design and technology, I am Fenar Khan , fervently pursuing excellence in web development, UI/UX design, and graphic artistry.
-
-With a robust foundation in these domains, I navigate the dynamic landscapes of digital creation, harnessing my skills to craft immersive user experiences and visually captivating interfaces. My journey has seen me contribute as a freelance professional, collaborating with clients to actualize their visions.
-
-Driven by a fervor for innovation, I've also honed my craft through part-time roles, gaining invaluable experience within diverse work environments. This fusion of academia and practical exposure fuels my commitment to staying at the forefront of design trends and technological advancements.
-
-Eager to continue this enriching journey, I seek opportunities to merge my creative prowess and technical acumen, contributing meaningfully to transformative projects and ventures that challenge the status quo.
-
-Let's connect and explore the realms where design meets functionality, creating impactful solutions together!
+          Software Engineer based in Croatia, specializing in technical
+          education through hands-on learning and building applications.
         </p>
       </div>
 
@@ -31,11 +32,11 @@ Let's connect and explore the realms where design meets functionality, creating 
 
         <div className='mt-16 flex flex-wrap gap-12'>
           {skills.map((skill) => (
-            <div className='block-container w-20 h-20'>
-              <div className='btn-back rounded-xl'/>
-              <div className='btn-front rounded-xl flex justify-center
-              items-center'>
-                <img src={skill.imageUrl}
+            <div className='block-container w-20 h-20' key={skill.name}>
+              <div className='btn-back rounded-xl' />
+              <div className='btn-front rounded-xl flex justify-center items-center'>
+                <img
+                  src={skill.imageUrl}
                   alt={skill.name}
                   className='w-1/2 h-1/2 object-contain'
                 />
@@ -46,26 +47,69 @@ Let's connect and explore the realms where design meets functionality, creating 
       </div>
 
       <div className='py-16'>
-          <h3 className='subhead-text'>
-            Work Experience
-          </h3>
+        <h3 className='subhead-text'>Work Experience.</h3>
+        <div className='mt-5 flex flex-col gap-3 text-slate-500'>
+          <p>
+            I've worked with all sorts of companies, leveling up my skills and
+            teaming up with smart people. Here's the rundown:
+          </p>
+        </div>
 
-          <div className='mt-5 flex flex-col gap-3 text-slate-500'>
-        <p>
-        As a multifaceted professional deeply passionate about the convergence of design and technology, I am Fenar Khan , fervently pursuing excellence in web development, UI/UX design, and graphic artistry.
+        <div className='mt-12 flex'>
+          <VerticalTimeline>
+            {experiences.map((experience, index) => (
+              <VerticalTimelineElement
+                key={experience.company_name}
+                date={experience.date}
+                iconStyle={{ background: experience.iconBg }}
+                icon={
+                  <div className='flex justify-center items-center w-full h-full'>
+                    <img
+                      src={experience.icon}
+                      alt={experience.company_name}
+                      className='w-[60%] h-[60%] object-contain'
+                    />
+                  </div>
+                }
+                contentStyle={{
+                  borderBottom: "8px",
+                  borderStyle: "solid",
+                  borderBottomColor: experience.iconBg,
+                  boxShadow: "none",
+                }}
+              >
+                <div>
+                  <h3 className='text-black text-xl font-poppins font-semibold'>
+                    {experience.title}
+                  </h3>
+                  <p
+                    className='text-black-500 font-medium text-base'
+                    style={{ margin: 0 }}
+                  >
+                    {experience.company_name}
+                  </p>
+                </div>
 
-        With a robust foundation in these domains, I navigate the dynamic landscapes of digital creation, harnessing my skills to craft immersive user experiences and visually captivating interfaces. My journey has seen me contribute as a freelance professional, collaborating with clients to actualize their visions.
-
-        Driven by a fervor for innovation, I've also honed my craft through part-time roles, gaining invaluable experience within diverse work environments. This fusion of academia and practical exposure fuels my commitment to staying at the forefront of design trends and technological advancements.
-
-        Eager to continue this enriching journey, I seek opportunities to merge my creative prowess and technical acumen, contributing meaningfully to transformative projects and ventures that challenge the status quo.
-
-        Let's connect and explore the realms where design meets functionality, creating impactful solutions together!
-        </p>
+                <ul className='my-5 list-disc ml-5 space-y-2'>
+                  {experience.points.map((point, index) => (
+                    <li
+                      key={`experience-point-${index}`}
+                      className='text-black-500/50 font-normal pl-1 text-sm'
+                    >
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </VerticalTimelineElement>
+            ))}
+          </VerticalTimeline>
+        </div>
       </div>
-      </div>
+
+      <hr className='border-slate-200' />
+      <CTA/>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;
