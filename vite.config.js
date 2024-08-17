@@ -5,9 +5,4 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.glb'],
-  resolve: {
-    alias: {
-      '@emailjs/browser': '/node_modules/@emailjs/browser/dist/email.min.js',
-    },
-  },
 })
