@@ -26,6 +26,12 @@ import arrow from './arrow.svg'
 import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
+import figma from './Figma-Dark.svg'
+import bootstrap from './Bootstrap.svg'
+import xd from './XD.svg'
+import wordpress from './Wordpress.svg'
+import illustrator from './Illustrator.svg'
+import photoshop from './Photoshop.svg'
 
 export {
     css,
@@ -55,5 +61,12 @@ export {
     arrow,
     contact,
     soundon,
-    soundoff
+    soundoff,
+    figma,
+    bootstrap,
+    wordpress,
+    illustrator,
+    xd,
+    photoshop,
+
 }

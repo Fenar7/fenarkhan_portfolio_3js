@@ -1,4 +1,6 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { freelancer, brandcraft, littlecarrot, techinwallet, gamca, BERAD, Promptopia, kunstlerin, dcolab, vidacta, osmoholidays, rawnak, findfresh,
+    manazel, easybank, primefly
+ } from "../assets/images";
 import {
     car,
     contact,
@@ -23,7 +25,13 @@ import {
     summiz,
     tailwindcss,
     threads,
-    typescript
+    typescript,
+    figma,
+    bootstrap,
+    wordpress,
+    illustrator,
+    xd,
+    photoshop,
 } from "../assets/icons";
 
 export const skills = [
@@ -88,11 +96,6 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
-    },
-    {
         imageUrl: sass,
         name: "Sass",
         type: "Frontend",
@@ -107,59 +110,92 @@ export const skills = [
         name: "TypeScript",
         type: "Frontend",
     }
+    ,
+    {
+        imageUrl: figma,
+        name: "TypeScript",
+        type: "Frontend",
+    }
+    ,
+    {
+        imageUrl: bootstrap,
+        name: "TypeScript",
+        type: "Frontend",
+    }
+    ,
+    {
+        imageUrl: wordpress,
+        name: "TypeScript",
+        type: "Frontend",
+    },
+    {
+        imageUrl: illustrator,
+        name: "TypeScript",
+        type: "Frontend",
+    },
+    {
+        imageUrl: xd,
+        name: "TypeScript",
+        type: "Frontend",
+    },
+    {
+        imageUrl: photoshop,
+        name: "TypeScript",
+        type: "Frontend",
+    }
 ];
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
+        title: "Full Stack Developer & UI|UX Designer",
+        company_name: "Little Carrot Lab",
+        icon: littlecarrot,
+        iconBg: "#ffd9bc",
+        date: "August 2024 - Present",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Developing and maintaining web applications using Next.js and other related technologies.",
+            "Overseeing the entire development process, from wireframing to the deployment of full-stack web applications.",
+            "Managing client relationships and ensuring their complete satisfaction with delivered solutions.",
+            "Engaging in code reviews and offering constructive feedback to enhance the quality of the team's work.",
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
-        iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
+        title: "Front End Developer | UI|UX Designer",
+        company_name: "TechinWallet",
+        icon: techinwallet,
+        iconBg: "#cae7ff",
+        date: "November 2023 - December 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Developed and optimized responsive web interfaces using modern front-end technologies.",
+            "Collaborated with the design team to create intuitive UI/UX designs that meet client needs and project objectives.",
+            "Implemented interactive and visually appealing elements to enhance user engagement and site performance.",
+            "Conducted usability testing and refined designs based on user feedback to improve the overall user experience.",
         ],
     },
     {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
+        title: "Web Developer | UI|UX Designer | Graphic Designer",
+        company_name: "brandcraft",
+        icon: brandcraft,
+        iconBg: "#ffd2be",
+        date: "Jan 2022 - March 2024",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "A Startup founded by my 2 friends and me",
+            "Develop and maintain websites, ensuring they meet client requirements and are user-friendly.",
+            "Create graphics and user interfaces that align with client branding and improve usability.",
+            "Work closely with co-founders and clients to deliver quality work and support the growth of the business.",
         ],
     },
     {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
+        title: "Freelance Webdeveloper | UI|UX Designer | Graphic Designer",
+        company_name: "Freelance",
+        icon: freelancer,
         iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
+        date: "Jan 2022 - Present",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Provided tailored web development services, creating responsive and user-friendly websites for a diverse range of clients.",
+            "Designed intuitive UI/UX interfaces, focusing on enhancing user experience and meeting specific client objectives.",
+            "Delivered graphic design solutions, including branding materials and digital assets, that effectively communicated client messages.",
+            "Managed client projects independently, ensuring timely delivery and maintaining strong communication throughout the project lifecycle.",
         ],
     },
 ];
@@ -173,56 +209,98 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/Fenar7',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/fenarkhan/',
     }
 ];
 
 export const projects = [
     {
-        iconUrl: pricewise,
+        iconUrl: gamca,
         theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
+        name: 'GAMCA Kerala',
+        description: "Developed a web application streamilines the process of booking GAMCA medical Application. Developed Using Nextjs, Nodejs, Expressjs, Mongodb.",
+        link: 'https://gamcakerala.netlify.app/',
     },
     {
-        iconUrl: threads,
+        iconUrl: BERAD,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        name: 'BERAD',
+        description: 'Stunning Website created for BERAD India with GSAP, locomotivescroll, Javascript, SASS, HTML',
+        link: 'https://berad.in',
     },
     {
-        iconUrl: car,
+        iconUrl: findfresh,
+        theme: 'btn-back-green',
+        name: 'Find Fresh UI|UX',
+        description: 'Developed and worked on creating the wireframe to completing the UI|UX of this ecommerce application',
+        link: 'https://www.figma.com/proto/4RkdodH6GTEKJ1awY3gZV9/Find-Fresh?page-id=0%3A1&node-id=63-68&viewport=365%2C276%2C0.02&t=zr5qyhhoixvWxSAv-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A2',
+    },
+    {
+        iconUrl: manazel,
+        theme: 'btn-back-green',
+        name: 'Manazel UAE UI|UX',
+        description: 'Developed and worked on creating the wireframe to completing the UI|UX one of the well known real estate developers in UAE',
+        link: 'https://www.figma.com/proto/BnS8WtGigooIGhXAvzBFxD/Manazel_Main?page-id=0%3A1&node-id=1-21&viewport=-33%2C232%2C0.04&t=4qgeXdIRr6QwI0Ir-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A21',
+    },
+    {
+        iconUrl: Promptopia,
         theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        name: 'Promptopia',
+        description: 'A Hobby Project Created Using Nextjs with OAuth Funcitonality Allows users to signing post,edit,delete prompts, also view and search other prompts',
+        link: 'https://promptopiafenar7.netlify.app/',
     },
     {
-        iconUrl: snapgram,
+        iconUrl: kunstlerin,
         theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        name: 'Kunstlerin',
+        description: 'An Ecomerce Website For Kunstlerin India for showcasing and selling thier products through web',
+        link: 'https://kunstlerin.in/',
     },
     {
-        iconUrl: estate,
+        iconUrl: dcolab,
         theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
+        name: 'Dcolab Website',
+        description: 'A Company Portfolio Website developed for Dcolab. Hosted usiing AWS',
+        link: 'https://dcolab.com/',
     },
     {
-        iconUrl: summiz,
+        iconUrl: vidacta,
         theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+        name: 'Vidacta India',
+        description: 'A Website developed for Vidatca India Which is a educational firm providing abroad study opurtunities',
+        link: 'https://vidacta-india.in/',
+    },
+    {
+        iconUrl: osmoholidays,
+        theme: 'Osmoholidays',
+        name: 'Osmoholidays',
+        description: 'A Website developed for Osmoholidays thorugh which users can browse packages and book them',
+        link: 'https://osmoholidays.com/',
+    },
+    {
+        iconUrl: easybank,
+        theme: 'Osmoholidays',
+        name: 'Easybank',
+        description: 'A Challenge form frontendmentor.com',
+        link: 'https://easybankfenar.netlify.app/',
+    },
+    {
+        iconUrl: primefly,
+        theme: 'Osmoholidays',
+        name: 'Primefly',
+        description: 'A Website developed for primefly aviation academy',
+        link: 'https://primeflyaviation.netlify.app/',
+    },
+    {
+        iconUrl: rawnak,
+        theme: 'Osmoholidays',
+        name: 'Rawnak Medical',
+        description: 'A Website developed for Rawnak Medicals',
+        link: 'https://rawnaqalibtisam.com/',
     }
 ];
