@@ -1,4 +1,5 @@
-import emailjs from "@emailjs/browser";
+const emailjs = require('@emailjs/browser');
+
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useRef, useState } from "react";
 
@@ -21,11 +22,13 @@ const Contact = () => {
   const handleFocus = () => setCurrentAnimation("walk");
   const handleBlur = () => setCurrentAnimation("idle");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setCurrentAnimation("hit");
-
+  
+    const emailjs = await import('@emailjs/browser');
+  
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -47,7 +50,7 @@ const Contact = () => {
             text: "Thank you for your message 😃",
             type: "success",
           });
-
+  
           setTimeout(() => {
             hideAlert(false);
             setCurrentAnimation("idle");
@@ -62,7 +65,7 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
           setCurrentAnimation("idle");
-
+  
           showAlert({
             show: true,
             text: "I didn't receive your message 😢",
@@ -71,6 +74,7 @@ const Contact = () => {
         }
       );
   };
+  
 
   return (
     <section className='relative flex lg:flex-row flex-col max-container'>
