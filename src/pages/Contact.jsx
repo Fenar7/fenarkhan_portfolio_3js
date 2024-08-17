@@ -1,4 +1,4 @@
-import emailjs from "@emailjs/browser";
+const emailjs = await import('@emailjs/browser');
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useRef, useState } from "react";
 
