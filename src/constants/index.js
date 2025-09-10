@@ -148,9 +148,9 @@ export const skills = [
 export const experiences = [
     {
         title: "Full Stack Developer & UI|UX Designer",
-        company_name: "Little Carrot Lab",
+        company_name: "Dad Concepts",
         icon: littlecarrot,
-        iconBg: "#ffd9bc",
+        iconBg: "#DEE6FF",
         date: "August 2024 - Present",
         points: [
             "Developing and maintaining web applications using Next.js and other related technologies.",
